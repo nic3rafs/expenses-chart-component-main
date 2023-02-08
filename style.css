@@ -1,0 +1,141 @@
+:root {
+  /* Primary */
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  /* Neutral */
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+  --text-small: 16px;
+  --text-normal: 18px;
+  --text-large: 27px;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--cream);
+  font-size: var(--text-normal);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 90%;
+  max-width: 440px;
+}
+.balance-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px;
+  border-radius: 16px;
+  background-color: var(--soft-red);
+  color: var(--very-pale-orange);
+}
+.balance-text > h2 {
+  font-size: var(--text-small);
+  font-weight: 400;
+  padding-bottom: 4px;
+}
+.balance-text > p {
+  font-size: var(--text-large);
+  font-weight: 700;
+}
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  border-radius: 16px;
+  background-color: var(--very-pale-orange);
+}
+.chart-title {
+  font-weight: 700;
+  font-size: var(--text-large);
+  color: var(--dark-brown);
+  padding-bottom: 48px;
+}
+.chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 5px;
+}
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.amount {
+  visibility: hidden;
+  font-size: 12px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  border-radius: 4px;
+  transform: translateY(-30px);
+  position: absolute;
+}
+.bar:hover > .amount {
+  visibility: visible;
+}
+.bar:hover {
+  filter: brightness(125%);
+}
+.bar p {
+  color: var(--medium-brown);
+  font-size: 14px;
+  padding-top: 4px;
+}
+.bar-column {
+  border-radius: 4px;
+  min-width: 40px;
+  background-color: var(--soft-red);
+}
+.divider {
+  margin: 24px 0;
+  background-color: var(--cream);
+  border-radius: 5px;
+  height: 2px;
+  width: 100%;
+}
+.chart-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 8px;
+}
+.chart-info h2 {
+  font-weight: 400;
+  font-size: var(--text-small);
+  color: var(--medium-brown);
+}
+.chart-total-text p {
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--dark-brown);
+  padding-top: 4px;
+}
+.chat-percent-text {
+  text-align: end;
+}
+.chat-percent-text p {
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+.today-bar {
+  background-color: var(--cyan);
+}
